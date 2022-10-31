@@ -26,7 +26,7 @@ contract SmallProxy is Proxy {
 
   function readStorage() public view returns(uint256 valueAtStorageSlotZero) {
     assembly {
-      valueAtStorageSlotZero := sload(0);
+      valueAtStorageSlotZero := sload(0)
     }
   }
 }
@@ -36,7 +36,7 @@ contract SmallProxy is Proxy {
 contract ImplementationA {
   uint256 public value;
 
-  setValue(uin256 newValue) public {
+  function setValue(uint256 newValue) public {
     value = newValue;
   }
 }
@@ -44,7 +44,7 @@ contract ImplementationA {
 contract ImplementationB {
   uint256 public value;
 
-  setValue(uint256 newValue) public {
+  function setValue(uint256 newValue) public {
     value = newValue + 1;
   }
 

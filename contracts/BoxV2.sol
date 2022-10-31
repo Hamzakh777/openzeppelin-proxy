@@ -6,17 +6,17 @@ contract BoxV2 {
 
   event ValueChanged(uint256 newValue);
 
-  function store(uint256 newValue) external public {
+  function store(uint256 newValue) external {
     value = newValue;
     emit ValueChanged(newValue);
   }  
 
-  function increment() external public {
+  function increment() external {
     value += 1;
     emit ValueChanged(value);
   }
 
-  function retrieve() public view returns(uint256 value) {
+  function retrieve() public view returns(uint256) {
     return value;
   }
 

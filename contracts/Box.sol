@@ -6,12 +6,12 @@ contract Box {
 
   event ValueChanged(uint256 newValue);
 
-  function store(uint256 newValue) external public {
+  function store(uint256 newValue) external {
     value = newValue;
     emit ValueChanged(newValue);
   }  
 
-  function retrieve() public view returns(uint256 value) {
+  function retrieve() public view returns(uint256) {
     return value;
   }
 
