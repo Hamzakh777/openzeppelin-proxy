@@ -52,7 +52,5 @@ contract ImplementationB {
   // function signature on both the proxy and implementation.
   // Transaparant Proxies and UUPS solve this problem
   // Ex:
-  // function setImplementation() {
-
-  // }
+  // function setImplementation() {}
 }
